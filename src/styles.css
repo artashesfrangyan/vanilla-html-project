@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 200vh;
+}
+
+span {
+  font-size: 16px;
+}
+
+.top-banner {
+  background: linear-gradient(180deg, #101010 0%, #0b0b0b 100%);
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 54px;
+  /* position: absolute; */
+  /* top: 54px; */
+}
+
+.top-banner__text {
+  color: white;
+}
+
+.top-banner-image {
+  position: absolute;
+}
+
+.top-banner-image--mobile {
+  left: 0;
+}
+
+.top-banner-image--tablet {
+  left: 0;
+}
+
+.top-banner-image--desktop {
+  left: 8px;
+}
+
+.top-banner__text--golden {
+  color: #d7a830;
+}
+
+.top-banner__text-discount::before,
+.top-banner__text-discount::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: white;
+  opacity: 0.15;
+  margin: auto 12px;
+  vertical-align: middle;
+}
+
+.top-banner__shop-btn {
+  position: absolute;
+  right: 24px;
+  cursor: pointer;
+}
+
+.top-banner__shop-btn--mobile {
+  background-color: unset;
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding: unset;
+}
+
+.top-banner__shop-btn--tablet,
+.top-banner__shop-btn--desktop {
+  background-color: white;
+  border: none;
+  height: 38px;
+  padding: 10px 14px;
+  border-radius: 100px;
+  backdrop-filter: blur(12px);
+  color: #0b0b0b;
+  text-shadow: 0px 0px 30px rgba(102, 204, 255, 0.2);
+  font-size: 16px;
+  line-height: 110%;
+  width: 115px;
+}
+
+button.top-banner__shop-btn--desktop {
+  right: 60px;
+}
+
+.top-banner-close-btn {
+  position: absolute;
+  right: 22px;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.main-banner {
+  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.45);
+  height: 349px;
+  max-width: 600px;
+  background-image: url("./img/main_banner.png");
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-color: rgb(15, 15, 15);
+  position: absolute;
+  width: 600px;
+  transition: all 1s;
+}
+
+.main-banner-text-wrapper {
+  margin: 0 35px 55px auto;
+  padding-top: 75px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-banner__title {
+  font-size: 28.5px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.main-banner__discount {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 110%; /* 44px */
+  letter-spacing: -1.6px;
+  color: transparent;
+  background-image: linear-gradient(to right, #7d5317, #eddf95);
+  background-clip: text;
+  margin-top: 25px;
+  margin-bottom: 14px;
+}
+
+.main-banner__promocode {
+  color: #6c6c70;
+  display: block;
+  line-height: 21px;
+}
+
+.main-banner__shop-btn {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: white;
+  opacity: 0.9;
+  padding: 12px 24px;
+  margin-top: 40px;
+}
+
+.main-banner__close-btn {
+  padding: 0;
+  background-color: unset;
+  border: none;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 833px) {
+  .top-banner-tablet,
+  .top-banner-desktop {
+    display: none;
+  }
+
+  .main-banner {
+    background-position: center;
+    border-radius: 0;
+    height: 349px;
+    max-width: 600px;
+    background-image: url("./img/main_banner_mobile.png");
+    background-position: left;
+    max-width: unset;
+    width: 100%;
+    top: 451px;
+    right: 0;
+  }
+
+  .main-banner-text-wrapper {
+    margin: 0 auto 55px auto;
+    padding-top: 75px;
+  }
+
+  .--tablet:not(.--mobile),
+  .--desktop:not(.--mobile) {
+    display: none;
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1727px) {
+  .top-banner-mobile,
+  .top-banner-desktop {
+    display: none;
+  }
+
+  .main-banner {
+    top: 667px;
+    right: 17px;
+  }
+
+  .--mobile:not(.--tablet),
+  .--desktop:not(.--tablet) {
+    display: none;
+  }
+}
+
+@media (min-width: 1728px) {
+  .top-banner-mobile {
+    display: none;
+  }
+
+  .main-banner {
+    top: 667px;
+    right: 34px;
+  }
+
+  .--mobile:not(.--desktop),
+  .--tablet:not(.--desktop) {
+    display: none;
+  }
+}
