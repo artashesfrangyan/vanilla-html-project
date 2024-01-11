@@ -129,14 +129,6 @@ button.top-banner__shop-btn--desktop {
 }
 
 .main-banner__discount {
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 110%; /* 44px */
-  letter-spacing: -1.6px;
-  color: transparent;
-  background-image: linear-gradient(to right, #7d5317, #eddf95);
-  background-clip: text;
   margin-top: 25px;
   margin-bottom: 14px;
 }
