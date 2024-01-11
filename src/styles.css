@@ -21,6 +21,7 @@ span {
 
 .top-banner__text {
   color: white;
+  z-index: 2;
 }
 
 .top-banner-image {
@@ -29,6 +30,7 @@ span {
 
 .top-banner-image--mobile {
   left: 0;
+  z-index: 1;
 }
 
 .top-banner-image--tablet {
